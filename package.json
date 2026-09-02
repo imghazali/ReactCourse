@@ -1,0 +1,29 @@
+{
+  "name": "class01",
+  "version": "1.0.0",
+  "description": "React Course Started",
+  "keywords": [
+    "react"
+  ],
+  "homepage": "https://github.com/imghazali/ReactCourse#readme",
+  "bugs": {
+    "url": "https://github.com/imghazali/ReactCourse/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imghazali/ReactCourse.git"
+  },
+  "license": "ISC",
+  "author": "Imam Ghazali",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}
