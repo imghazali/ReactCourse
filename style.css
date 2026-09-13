@@ -1,9 +1,104 @@
-#header{
-    color:rgb(0, 13, 128);
-    font-size:10vw;
-    text-align:center;
-    font-style:italic;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#header::selection{
-    color:rgb(1, 117, 1);
+
+body {
+    background-color: #f7f9fa;
+    color: #333;
+}
+
+/* Header & Navigation */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-items>ul {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.nav-items>ul>li {
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #444;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-items>ul>li:hover {
+    color: #e46d06;
+    /* Swiggy orange accent */
+}
+
+/* Restaurant Container Grid */
+.res-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Restaurant Card Layout */
+.res-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.res-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.res-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.res-card h4 {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+
+.res-card h4:last-of-type {
+    color: #2e7d32;
+    /* Green for ratings */
+    font-weight: bold;
 }
