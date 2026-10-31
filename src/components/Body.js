@@ -1,20 +1,32 @@
 import ResCard from "./ResCards";
 import { resObj } from "../utils/mockdata";
-
+import { useState } from "react";
 
 const Body = () => {
+  const [listOfRestaurant, setListOfRestaurant] = useState(resObj);
   return (
-    <div className="res-container">
-      {/* <ResCard resData={resObj} /> */}
+    <>
+      <button
+        className="btn"
+        onClick={() => {
+          const filteredRestaurants = listOfRestaurant.filter((res) => {
+            return res.rating > 4;
+          });
+          setListOfRestaurant(filteredRestaurants);
+        }}
+      >
+        TOP RATED RESTAURANTS
+      </button>
 
-      {
-        resObj.map((data,id) => {
+      <div className="res-container">
+        {/* <ResCard resData={resObj} /> */}
+
+        {listOfRestaurant.map((data, id) => {
           return <ResCard key={id} resData={[data]} />;
-        })
-      }
-    </div>
+        })}
+      </div>
+    </>
   );
 };
-
 
 export default Body;

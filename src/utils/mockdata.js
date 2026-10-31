@@ -14,7 +14,7 @@ export let resObj = [
     name: "Margherita Pizza",
     price: 199,
     category: "Pizza",
-    rating: 4.5,
+    rating: 3.5,
     isVeg: true,
     image:
       "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80",
@@ -24,7 +24,7 @@ export let resObj = [
     name: "Cheese Burger",
     price: 179,
     category: "Burger",
-    rating: 4.6,
+    rating: 3.6,
     isVeg: false,
     image:
       "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
@@ -34,7 +34,7 @@ export let resObj = [
     name: "Masala Dosa",
     price: 99,
     category: "South Indian",
-    rating: 4.4,
+    rating: 2.4,
     isVeg: true,
     image:
       "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80",
@@ -44,7 +44,7 @@ export let resObj = [
     name: "Creamy Pasta",
     price: 219,
     category: "Pasta",
-    rating: 4.5,
+    rating: 2.5,
     isVeg: true,
     image:
       "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=800&q=80",
@@ -74,7 +74,7 @@ export let resObj = [
     name: "Grilled Chicken",
     price: 299,
     category: "Grill",
-    rating: 4.6,
+    rating: 1.6,
     isVeg: false,
     image:
       "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=80",
