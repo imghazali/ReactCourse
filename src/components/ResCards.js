@@ -1,19 +1,52 @@
-import { CARD_IMG } from "../utils/constants";
-import { useState } from "react";
+const ResCards = ({ resData }) => {
+  const info = resData?.info || resData;
 
-const ResCard = (props) => {
+  const {
+    name,
+    cloudinaryImageId,
+    cuisines,
+    avgRating,
+    avgRatingString,
+    costForTwo,
+    sla,
+    areaName,
+    aggregatedDiscountInfoV3,
+  } = info || {};
 
-  let { image, name, price, category, isVeg, rating } = props.resData[0];
-  console.log(props);
+  const imageUrl = cloudinaryImageId
+    ? `https://media-assets.swiggy.com/swiggy/image/upload/${cloudinaryImageId}`
+    : "";
+
   return (
-    <div className="res-card" >
-      <img className="card-img" src={image} />
-      <h3>{name}</h3>
-      <h5>Price: Rs. {price}</h5>
-      <h5>Category: {category}</h5>
-      <h5>Is Veg : {isVeg ? "Vegetarian" : "Non-Vegetarian"}</h5>
-      <h5>Rating: {rating}</h5>
+    <div className="res-card">
+      <div className="res-img-container">
+        <img className="res-img" src={imageUrl} alt={name || "Restaurant"} />
+
+        {aggregatedDiscountInfoV3 && (
+          <div className="discount">
+            {aggregatedDiscountInfoV3.header}{" "}
+            {aggregatedDiscountInfoV3.subHeader}
+          </div>
+        )}
+      </div>
+
+      <div className="res-details">
+        <h3>{name}</h3>
+
+        <p className="rating">
+          ⭐ {avgRatingString || avgRating || "N/A"}
+          {" · "}
+          {sla?.deliveryTime || "N/A"} mins
+        </p>
+
+        <p className="cuisines">{cuisines?.join(", ") || "Various cuisines"}</p>
+
+        <p>{areaName || "Location unavailable"}</p>
+
+        <p>{costForTwo || ""}</p>
+      </div>
     </div>
   );
 };
-export default ResCard;
+
+export default ResCards;
